@@ -16,8 +16,8 @@ app.get('/category/list', (req, res) => {
     const data = [
         {name:'채용', id:0},
         {name:'타임라인', id:1},
-        {name:'한화시스템', id:2},
-        {name:'방산 라운지', id:3},
+        {name:'컴컴시스템', id:2},
+        {name:'카페 라운지', id:3},
         {name:'IT 엔지니어', id:4},
         {name:'토픽', id:5},
         {name:'부동산', id:6},
@@ -31,10 +31,10 @@ app.get('/category/list', (req, res) => {
 const boardData = [
     {cid:0, title:'시니어 개발자를 채용합니다.'},
     {cid:1, title:'이거 나만 그러나'},
-    {cid:2, title:'한화시스템 연봉은??'},
-    {cid:3, title:'방산의 미래가 어둡다'},
-    {cid:4, title:'현대오토에버 금융직무 근무지'},
-    {cid:5, title:'삼전 반도체 과장급 연말정산 연봉이 얼마정도여?'},
+    {cid:2, title:'컴컴시스템 연봉은??'},
+    {cid:3, title:'카페의 미래가 어둡다'},
+    {cid:4, title:'현X오X에X 금융직무 근무지'},
+    {cid:5, title:'반도체 과장급 연말정산 연봉이 얼마정도여?'},
 ]
 
 app.get('/board/list', (req, res) => {
