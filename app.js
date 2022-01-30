@@ -10,6 +10,10 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
+var cors = require('cors')
+
+app.use(cors());
+
 //test api
 app.get('/category/list', (req, res) => {
     console.log('[req]['+new Date()+'] /category/list')
