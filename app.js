@@ -29,7 +29,7 @@ app.get('/category/list', (req, res) => {
     ]
     setTimeout(()=>{
         res.send(data)
-    }, 2000)
+    }, 1000)
 })
 
 const boardData = [
@@ -61,5 +61,5 @@ app.get('/board/list', (req, res) => {
 
     setTimeout(()=>{
         res.send(result)
-    }, 2000)
+    }, 1000)
 })
