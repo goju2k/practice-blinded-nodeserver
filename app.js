@@ -33,12 +33,12 @@ app.get('/category/list', (req, res) => {
 })
 
 const boardData = [
-    {cid:0, title:'시니어 개발자를 채용합니다.'},
-    {cid:1, title:'이거 나만 그러나'},
-    {cid:2, title:'컴컴시스템 연봉은??'},
-    {cid:3, title:'카페의 미래가 어둡다'},
-    {cid:4, title:'현X오X에X 금융직무 근무지'},
-    {cid:5, title:'반도체 과장급 연말정산 연봉이 얼마정도여?'},
+    {cid:0, id:1, cname:'채용', title:'시니어 개발자를 채용합니다.', group:'채용팀', nick:'메리메리', time:new Date('2022-02-01 18:22:11'), view:0, reply:0},
+    {cid:1, id:2, cname:'타임라인', title:'이거 나만 그러나', group:'컨플루언스', nick:'메리메리', time:new Date('2022-01-01 11:22:11'), view:12, reply:2},
+    {cid:2, id:3, cname:'컴컴시스템', title:'컴컴시스템 연봉은??', group:'사성전자', nick:'메리메리', time:new Date('2021-07-01 23:22:11'), view:22, reply:1},
+    {cid:3, id:4, cname:'카페 라운지', title:'카페의 미래가 어둡다', group:'채용팀', nick:'메리메리', time:new Date('2021-02-01 09:22:11'), view:8, reply:23},
+    {cid:4, id:5, cname:'IT 엔지니어', title:'현X오X에X 금융직무 근무지', group:'채용팀', nick:'메리메리', time:new Date('2020-05-01 12:22:11'), view:12302, reply:20},
+    {cid:5, id:6, cname:'토픽', title:'반도체 과장급 연말정산 연봉이 얼마정도여?', group:'채용팀', nick:'메리메리', time:new Date('2020-02-01 01:22:11'), view:330, reply:12},
 ]
 
 app.get('/board/list', (req, res) => {
@@ -62,4 +62,26 @@ app.get('/board/list', (req, res) => {
     setTimeout(()=>{
         res.send(result)
     }, 1000)
+})
+
+const boardItems = [
+    {id:1, content:'시니어가 있는지 모르겠네???\n한번 지원해보쇼~~'},
+]
+
+app.get('/board/detail', (req, res) => {
+
+    console.log('[req]['+new Date()+'] /board/detail', req.query)
+
+    const id = req.query.id
+    
+    let result = boardItems.filter(item=>{
+        if(item.id == id){
+            return true
+        }
+    })
+    
+    setTimeout(()=>{
+        res.send(result && result[0]?result[0]:null)
+    }, 1000)
+
 })
