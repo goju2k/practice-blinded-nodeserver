@@ -42,6 +42,14 @@ const boardData = [
     {cid:5, id:6, cname:'토픽', title:'반도체 과장급 연말정산 연봉이 얼마정도여?', group:'반도췌', nick:'vasss', time:new Date('2020-02-01 01:22:11').getTime(), view:330, reply:12, good:0},
 ]
 
+const detailData = [
+    {
+        id:1, tags:['#채용1', '#채용2', '#채용3'],
+        content:'채용합니다.\n채용한다구요.... \n\n 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용',
+        reply:[{content:'리플1', group:'사성전자', nick:'333333'},{content:'리플2', group:'사성전자', nick:'333333'},{content:'리플3', group:'사성전자', nick:'333333'}]
+    }
+]
+
 app.get('/board/list', (req, res) => {
     
     console.log('[req]['+new Date()+'] /board/list', req.query)
@@ -65,17 +73,13 @@ app.get('/board/list', (req, res) => {
     }, 1000)
 })
 
-const boardItems = [
-    {id:1, content:'시니어가 있는지 모르겠네???\n한번 지원해보쇼~~'},
-]
-
 app.get('/board/detail', (req, res) => {
 
     console.log('[req]['+new Date()+'] /board/detail', req.query)
 
     const id = req.query.id
     
-    let result = boardItems.filter(item=>{
+    let result = detailData.filter(item=>{
         if(item.id == id){
             return true
         }
