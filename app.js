@@ -50,6 +50,10 @@ const detailData = [
     }
 ]
 
+for(let i = 10 ; i < 100 ; i++){
+    detailData[0].replyList.push({content:'리플'+i, group:'사성전자', nick:'333333'})
+}
+
 app.get('/board/list', (req, res) => {
     
     console.log('[req]['+new Date()+'] /board/list', req.query)
