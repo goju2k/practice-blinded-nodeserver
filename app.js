@@ -46,7 +46,7 @@ const detailData = [
     {
         id:1, tags:['#채용1', '#채용2', '#채용3'],
         content:'채용합니다.\n채용한다구요.... \n\n 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용 채용',
-        reply:[{content:'리플1', group:'사성전자', nick:'333333'},{content:'리플2', group:'사성전자', nick:'333333'},{content:'리플3', group:'사성전자', nick:'333333'}]
+        replyList:[{content:'리플1', group:'사성전자', nick:'333333'},{content:'리플2', group:'사성전자', nick:'333333'},{content:'리플3', group:'사성전자', nick:'333333'},{content:'리플4', group:'사성전자', nick:'333333'},{content:'리플4', group:'사성전자', nick:'333333'},{content:'리플4', group:'사성전자', nick:'333333'}]
     }
 ]
 
